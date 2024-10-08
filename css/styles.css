@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+
+/* Navbar Styles */
+header {
+    background: linear-gradient(to right, #18a0fb, #0056b3);
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+    z-index: 1000; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-family: 'Comfortaa', cursive; 
+    font-size: 28px; 
+    color: white; 
+    font-weight: bold;
+}
+
+
+.logo-image {
+    width: auto; 
+    height: 25px; 
+    background: url('../images/Union1.png');
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #ffd700; 
+    transform: scale(1.05); 
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px; 
+}
+
+.login-btn,
+.register-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.register-btn {
+    background-color: #ffd700; 
+    color: black;
+}
+
+.register-btn:hover {
+    background-color: #e6c100; 
+}
+
+.login-btn {
+    background-color: transparent; 
+    color: white;
+    border: 1px solid #ffd700; 
+}
+
+.login-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .auth-buttons {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav ul li {
+        margin: 5px 0; 
+    }
+}
+
+/* Hero section */
+.hero {
+    background: url('../images/lapbg.jpeg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    letter-spacing: 1px; 
+    line-height: 1.2; 
+}
+
+/* Adjusting h1 for smaller screens */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px; 
+    }
+}
+
+.join-btn {
+    background-color: #18a0fb;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Features section */
+.features {
+    padding: 50px;
+    text-align: left; 
+    width: 100%;
+    background-color: #fff;
+}
+
+.features h1 {
+    font-size: 26px;
+    font-weight: bolder;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 40px; 
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column; 
+    width: calc(50% - 20px); 
+}
+
+.feature-item {
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px; 
+}
+
+.feature-item h3 {
+    margin-top: 0; 
+}
+
+.feature-item p {
+    font-size: 14px; 
+    margin: 10px 0; 
+}
+
+.learn-more-btn {
+    background-color: #18a0fb;
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; 
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column; 
+    }
+
+    .left-column, .right-column {
+        width: 100%; 
+    }
+
+    .feature-item {
+        width: 100%; 
+        padding: 15px;
+    }
+
+    .learn-more-btn {
+        padding: 6px 12px; 
+    }
+}
+
+/* Photo Post Section */
+.photo-post-section {
+    padding: 60px;
+    background-color: #f9f9f9; 
+    text-align: center; 
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666; 
+}
+
+/* Content layout */
+.photo-post-content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 50px; 
+}
+
+@media (max-width: 1024px) {
+    .photo-post-content {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .image-content {
+        width: 120%;
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 100%;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .photo-post-content {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .text-content h2 {
+        font-size: 28px;
+    }
+
+    .text-column {
+        padding: 15px;
+    }
+}
+
+.text-content {
+    flex: 2; 
+}
+
+/* Intro Header Styling */
+.text-content h4 {
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px; 
+    color: #000; 
+    text-align: center; 
+}
+
+.text-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    color: #666; 
+    text-align: center;
+}
+
+.three-text-columns {
+    margin-top: 10rem;
+}
+
+.text-column {
+    flex: 1;
+    padding: 10px;
+    
+}
+
+.text-column h4 {
+    font-size: 18px; 
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #000;
+    
+}
+
+.text-column p {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+.image-content {
+    flex: 1.5; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: 550px; 
+    margin-left: 40px;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+/* Make Your Photos More Stylish Section */
+.stylish-photos {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff; 
+}
+
+.stylish-photos h2 {
+    font-size: 48px; 
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.stylish-photos p {
+    font-size: 24px; 
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.stylish-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+.stylish-photo-item {
+    border: 1px solid gray; 
+    border-radius: 8px; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    transition: transform 0.3s ease; 
+}
+
+.stylish-photo-item:hover {
+    transform: scale(1.05); 
+}
+
+.stylish-photo-item img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+.stylish-photo-item h3 {
+    font-size: 24px;
+    margin: 15px 0 10px; 
+    color: #333;
+}
+
+.stylish-photo-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .stylish-photos-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .stylish-photos-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .stylish-photos h2 {
+        font-size: 28px; 
+    }
+
+    .stylish-photos p {
+        font-size: 16px; 
+    }
+}
+
+/* Form section */
+.signup-form {
+    text-align: center; 
+    background-color: transparent; 
+    max-width: 800px; 
+    margin: 50px auto; 
+}
+
+.signup-form h2 {
+    margin-bottom: 20px; 
+    font-size: 48px; 
+    font-weight: bold; 
+    color: #000; 
+    display: inline-block; 
+}
+
+.signup-form p {
+    margin-bottom: 30px; 
+    font-size: 28px; 
+    color: #666;
+    display: inline-block; 
+}
+
+.registration-container {
+    padding: 40px; 
+    border: 1px solid gray;
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    max-width: 800px; 
+    margin: 50px auto; 
+}
+
+.registration-container h2 {
+    font-size: 26px; 
+    font-weight: bolder; 
+    color: #000; 
+    align-self: flex-start;
+    margin-top: 20px; 
+}
+
+/* Form styles */
+form {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.input-row {
+    display: flex; 
+    gap: 15px;
+    margin-top: 6px;
+}
+
+form input {
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 48%; 
+}
+
+form button {
+    padding: 12px 20px; 
+    width: auto; 
+    align-self: flex-start; 
+    background-color: #18a0fb; 
+    color: white; 
+    border: none; 
+    margin-bottom: 6px;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif; 
+    transition: background-color 0.3s ease; 
+}
+
+form button:hover {
+    background-color: #0056b3; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .signup-form {
+        padding: 20px; 
+        margin: 20px;
+    }
+
+    form input {
+        width: 100%; 
+    }
+
+    form button {
+        width: 100%; 
+        padding: 12px; 
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: #303030;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-family: 'Comfortaa', cursive; 
+    
+}
+
+.logoo-image {
+    width: auto; 
+    height: 25px; 
+    background: url('../images/Union1.png');
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    margin-left: 25rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer-column ul {
+    list-style: none;
+    font-size: 12px;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 5px;
+    color: #d6d6d6;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+}
+
+.footer-column li:hover {
+    text-decoration: underline; 
+}
+
+.footer-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.reg-btn,
+.log-btn {
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px; 
+    border-radius: 5px;
+}
+
+
+.reg-btn {
+    background-color: #18a0fb;
+    color: white;
+    border: none;
+}
+
+.reg-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.log-btn {
+    background-color: white;
+    color: #18a0fb;
+    margin-top: 12px;
+    border: 1px solid #18a0fb;
+}
+
+.log-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.footer-divider {
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+    background-color: #cccccc;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    background-color: #4b4b4b;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%; 
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #18a0fb;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+}
+
